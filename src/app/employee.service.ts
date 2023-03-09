@@ -34,4 +34,10 @@ export class EmployeeService {
 
   }
 
+  // delete employee by id
+  deleteEmployee(id:number):Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl}/${id}`)
+
+  }
+
 }
